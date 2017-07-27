@@ -1,6 +1,6 @@
 {
   "name": "gp_engine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The game engine used by the game Glitchping by Mund. See https://mund.me",
   "main": "index.js",
   "devDependencies": {
