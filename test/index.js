@@ -1,8 +1,9 @@
 const assert = require('assert')
 const jsonfile = require('jsonfile')
-/* global describe it */
+
 describe('Glitchping', () => {
   const Game = require('../index.js')
+  
   describe('#goalCheck', () => {
     const testCase = {
       paddles: [
@@ -17,14 +18,17 @@ describe('Glitchping', () => {
         }
       ]
     }
+ 
     const goal = new Game(testCase)
     for (let i = 0; i < 100; i++) {
       goal.update()
     }
+ 
     it('should add the score if the ball is in the goal', () => {
       assert.equal(goal.paddles[1].points, 1)
     })
   })
+
   describe('#bounce', () => {
     const bounce = new Game()
     for (let i = 0; i < 100; i++) {
@@ -37,13 +41,15 @@ describe('Glitchping', () => {
       assert.ok(bounce.paddles[0].controlsBall)
     })
   })
+
   describe('#control', () => {
     const control = new Game()
+    const ballPath = []
+    const paddlePath = []
+
     for (let i = 0; i < 100; i++) {
       control.update()
     }
-    const ballPath = []
-    const paddlePath = []
     for (let i = 0; i < 100; i++) {
       control.update([{
         paddle: control.paddles[0],
@@ -52,6 +58,7 @@ describe('Glitchping', () => {
       ballPath.push(control.ball.pos.slice())
       paddlePath.push(control.paddles[0].pos[1])
     }
+
     it('should ensure that the ball moves as expected given a certain input', () => {
       assert.deepEqual(ballPath, jsonfile.readFileSync('./test/ballPath.json'))
     })
