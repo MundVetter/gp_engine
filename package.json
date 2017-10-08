@@ -1,14 +1,17 @@
 {
   "name": "gp_engine",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "The game engine used by the game Glitchping by Mund. See https://mund.me",
   "main": "index.js",
   "devDependencies": {
-    "mocha": "^3.4.2",
-    "jsonfile": "^3.0.0"
+    "benchmark": "^2.1.4",
+    "jsonfile": "^3.0.0",
+    "microtime": "^2.1.6",
+    "mocha": "^3.4.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "benchmark": "node benchmark/index"
   },
   "keywords": [
     "mund.me",
