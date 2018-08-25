@@ -23,7 +23,7 @@ suite
   })
   .on('cycle', (event) => {
     endTime = microtime.now()
-    console.log(`Total elapsed time: ${(endTime - startTime)/ 1000000} seconden.`)
+    console.log(`Total elapsed time: ${(endTime - startTime)/ 1000000} seconds.`)
     console.log(String(event.target))
   })
   .run()
