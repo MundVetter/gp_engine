@@ -7,7 +7,7 @@
     "benchmark": "^2.1.4",
     "jsonfile": "^3.0.1",
     "microtime": "^2.1.8",
-    "mocha": "^5.2.0"
+    "mocha": "^10.0.0"
   },
   "scripts": {
     "test": "mocha",
