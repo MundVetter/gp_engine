@@ -4,14 +4,11 @@
   "description": "The game engine used by the game Glitchping by Mund. See https://mund.me",
   "main": "index.js",
   "devDependencies": {
-    "benchmark": "^2.1.4",
     "jsonfile": "^3.0.1",
-    "microtime": "^2.1.8",
     "mocha": "^10.0.0"
   },
   "scripts": {
-    "test": "mocha",
-    "benchmark": "node benchmark/index"
+    "test": "mocha"
   },
   "keywords": [
     "mund.me",
